@@ -12,21 +12,21 @@ spec:
       initialDelay: 30s
       provider:
         opsmx:
-          gateUrl: https://argoisdqa.isd-dev.opsmx.net/
-          baselineStartTime: "2021-09-03T11:29:46.915Z"
-          canaryStartTime: "2021-09-03T11:29:46.915Z"
-          application:  analysistestapplication
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z"
+          application:  endtoendapp
           user: admin
           lifetimeHours: "0.1"
           threshold:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: CUSTOMDatadog
+          - metricTemplateName: CUSTOM
             metricScopeVariables: "variable1"
             baselineMetricScope: "service:baseapp"
             canaryMetricScope: "service:canaryapp"
-            logTemplateName: RegularIsdTemp2
+            logTemplateName: newelktemplate
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
