@@ -21,7 +21,7 @@ spec:
             marginal: 60
           services:
           - serviceName: elkservice
-            logTemplateName: elktemplate
+            logTemplateName: mkrlogtemp
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
