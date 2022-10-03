@@ -11,7 +11,7 @@ spec:
       provider:
         opsmx:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net
-          application: demoapphash
+          application: test123
           user: admin
           lifetimeHours: "0.05"
           threshold:
@@ -19,7 +19,7 @@ spec:
             marginal: 60
           services:
           - serviceName: service1
-            logTemplateName: stacktemplate
+            logTemplateName: elktemplate 
             logScopeVariables: "resource.labels.container_name"
             baselineLogScope: "issuegen-prod"
             canaryLogScope: "issuegen-prod"
